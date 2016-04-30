@@ -10,6 +10,7 @@ const PATHS = {
 }
 
 process.env.BABEL_ENV = TARGET
+const PROD = process.env.NODE_ENV === 'production'
 
 const common = {
   // Entry accepts a path or an object of entries. We'll be using the
