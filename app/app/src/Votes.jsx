@@ -13,7 +13,7 @@ var request = require('superagent')
 import VoteDialog from './VoteDialog'
 import NewVoteDialog from './NewVoteDialog'
 
-const requestUrl = ''
+const requestUrl = 'descontrole.herokuapp.com'
 
 export default class Votes extends React.Component {
   componentWillMount () {
