@@ -29,7 +29,9 @@ export default class Votes extends React.Component {
     }
     this.openNewVote = this.openNewVote.bind(this)
     this.closeNewVote = this.closeNewVote.bind(this)
+    }
 
+  componentDidMount () {
     window.setInterval(function () {
       this._getVotes()
       console.log('updated!')
