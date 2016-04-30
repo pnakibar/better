@@ -6,7 +6,6 @@ const shortid = require('shortid')
 /* GET home page. */
 
 router.get('/bets', (req, res, next) => {
-  console.log(VotesController.getBets)
   res.json(VotesController.getBets())
 })
 
@@ -24,10 +23,14 @@ router.get('/bets/:id', (req, res, next) => {
   }
 })
 
-router.post('/bets/vote', (req, res, next) => {
-  console.log(req.body.id)
-  console.log(req.body.action)
-  res.json(VotesController.voteBet(req.body.id, req.body.action))
+router.post('/bets/:id/:action', (req, res, next) => {
+  const id = req.params.id
+  const action = req.params.action
+  if (action === 'do' || action === 'dont') res.json(VotesController.voteBet(id, action))
+  else {
+    res.status(401)
+    res.json({err: 'action now allowed'})
+  }
 })
 
 module.exports = router

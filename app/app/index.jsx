@@ -2,10 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-
-const app = () => <p>Hello World!</p>
-
+import App from './src/App'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import './main.css'
+import 'muicss/react'
+
 injectTapEventPlugin()
 
 const AuxApp = () => (
