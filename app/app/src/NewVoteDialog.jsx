@@ -4,7 +4,7 @@ import FlatButton from 'material-ui/FlatButton'
 import TextField from 'material-ui/TextField'
 import Snackbar from 'material-ui/Snackbar'
 var request = require('superagent')
-const requestUrl = '/'
+const requestUrl = ''
 
 /**
  * A modal dialog can only be closed by selecting one of the actions.
