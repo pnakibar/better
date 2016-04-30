@@ -28,12 +28,11 @@ class App extends React.Component {
   }
   render () {
     const testStyle = {
-      marginTop: '20px',
-      backgroundColor: '#303030'
+      marginTop: '20px'
     }
 
     return (
-      <div>
+      <div style={{backgroundColor: '#303030'}}>
         <MyAppBar
           appName={this.appName}
           toggleDrawer={this.toggleDrawer}/>
