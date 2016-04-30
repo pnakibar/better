@@ -32,10 +32,7 @@ export default class Votes extends React.Component {
     }
 
   componentDidMount () {
-    window.setInterval(function () {
-      this._getVotes()
-      console.log('updated!')
-    }, 2000)
+    window.setInterval(this._getVotes, 2000)
   }
 
   openNewVote () {
