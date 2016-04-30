@@ -7,10 +7,12 @@ class VotesController {
       {
         id: 'S1ob3_b-',
         name: 'Test',
+        description: 'Test Description',
         votes: {
           do: 0,
           dont: 0
-        }
+        },
+        age: new Date(Date.now())
       }
     ]
   }
@@ -42,6 +44,10 @@ class VotesController {
   addBet (bet) {
     bet.id = UUID.v4()
     bet.age = new Date(Date.now())
+    bet.votes = {
+      do: 0,
+      dont: 0
+    }
     this.bets.push(bet)
     return this.getBets()
   }
@@ -49,13 +55,13 @@ class VotesController {
   organizeBets () {
     const votesTotal = (bet) => (bet.votes.do + bet.votes.dont) * 10
     const valueDate = (bet) => bet.age.getTime()
-    const betValue = (bet) => valueDate(bet) + votesTotal(bet)
+    const betValue = (bet) => valueDate(bet) - votesTotal(bet)
 
     const compareBets = (bet1, bet2) => {
       const bet1Value = betValue(bet1)
       const bet2Value = betValue(bet2)
-      if (bet1Value > bet2Value) return 1
-      if (bet2Value > bet1Value) return -1
+      if (bet1Value > bet2Value) return -1
+      if (bet2Value > bet1Value) return 1
       return 0
     }
 
