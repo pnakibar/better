@@ -13,12 +13,12 @@ class App extends React.Component {
         id: 0,
         displayName: 'Option 1',
         displayComponent: <Votes />
-      },
+    }/*,
       {
         id: 1,
         displayName: 'Option 2',
         displayComponent: 'Option 2'
-      }
+      }*/
     ]
     this.toggleDrawer = this.toggleDrawer.bind(this)
     this.state = {
