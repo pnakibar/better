@@ -28,7 +28,8 @@ class App extends React.Component {
   }
   render () {
     const testStyle = {
-      marginTop: '20px'
+      marginTop: '20px',
+      backgroundColor: '#303030'
     }
 
     return (
