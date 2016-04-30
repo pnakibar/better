@@ -13,7 +13,7 @@ var request = require('superagent')
 import VoteDialog from './VoteDialog'
 import NewVoteDialog from './NewVoteDialog'
 
-const requestUrl = 'http://localhost:3000'
+const requestUrl = '/'
 
 export default class Votes extends React.Component {
   componentWillMount () {
