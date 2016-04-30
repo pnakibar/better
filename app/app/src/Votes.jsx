@@ -32,6 +32,7 @@ export default class Votes extends React.Component {
 
     window.setInterval(function () {
       this._getVotes()
+      console.log('updated!')
     }, 2000)
   }
 
