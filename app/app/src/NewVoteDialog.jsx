@@ -9,12 +9,13 @@ const requestUrl = 'descontrole.herokuapp.com'
 /**
  * A modal dialog can only be closed by selecting one of the actions.
  */
-export default class DialogExampleModal extends React.Component {
+export default class NewVoteDialog extends React.Component {
   constructor (props) {
     super(props)
     this.handleName = this.handleName.bind(this)
     this.handleDescription = this.handleDescription.bind(this)
     this.sendToServer = this.sendToServer.bind(this)
+    this.snackbarHandleClose = this.snackbarHandleClose.bind(this)
     this.state = ({
       name: '',
       description: '',
