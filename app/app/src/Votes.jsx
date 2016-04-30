@@ -198,7 +198,7 @@ class Entry extends React.Component {
             onRequestClose={this.handleClose}
           >
             {description}<br/><br/>
-          <b style={{color: this.context.muiTheme.palette.primary1Color}}>{this.props.entry.votes.do}</b> votaram que <b>vai rolar</b>, enquanto <b style={{color: this.context.muiTheme.palette.accent1Color}}>{this.props.entry.votes.dont}</b> votaram que <b>não vai rolar</b>
+          <b color={this.context.muiTheme.palette.primary1Color}>{this.props.entry.votes.do}</b> votaram que <b>vai rolar</b>, enquanto <b color={this.context.muiTheme.palette.accent1Color}>{this.props.entry.votes.dont}</b> votaram que <b>não vai rolar</b>
           </Dialog>
         </div>
         <Snackbar
