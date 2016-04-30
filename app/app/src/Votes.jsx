@@ -17,7 +17,6 @@ const requestUrl = ''
 
 export default class Votes extends React.Component {
   componentWillMount () {
-    console.log('damn')
     this._getVotes()
   }
 
@@ -30,6 +29,10 @@ export default class Votes extends React.Component {
     }
     this.openNewVote = this.openNewVote.bind(this)
     this.closeNewVote = this.closeNewVote.bind(this)
+
+    window.setInterval(function () {
+      this._getVotes()
+    }, 2000)
   }
 
   openNewVote () {
